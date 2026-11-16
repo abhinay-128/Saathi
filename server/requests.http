@@ -1,0 +1,26 @@
+POST http://localhost:5000/api/elders
+Content-Type: application/json
+
+{
+  "name": "Dadi",
+  "age": 72
+}
+
+
+### 
+GET http://localhost:5000/api/elders
+
+
+###
+post http://localhost:5000/api/medicines
+Content-Type: application/json
+
+{
+  "elder":"6af842e6ac7123d0d5f5ed41",
+  "name": "BP tablet",
+  "times": ["08:00", "20:00"]
+}
+
+###
+
+GET http://localhost:5000/api/medicines
