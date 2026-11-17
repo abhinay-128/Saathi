@@ -24,3 +24,43 @@ Content-Type: application/json
 ###
 
 GET http://localhost:5000/api/medicines
+
+###
+
+POST http://localhost:5000/api/checkins
+Content-Type: application/json
+
+{
+  "elderId": "6af842e6ac7123d0d5f5ed41",
+  "mood": "good",
+  "note": "Slept well and had breakfast"
+}
+
+###
+http://localhost:5000/api/checkins/latest/6af842e6ac7123d0d5f5ed41
+
+###
+
+POST http://localhost:5000/api/doselogs
+Content-Type: application/json
+
+{
+  "elder": "6af842e6ac7123d0d5f5ed41",
+  "medicine": "6af97ab95220e4eb3896e895",
+  "status": "taken"
+}
+
+###
+
+GET http://localhost:5000/api/doselogs/stats/6af842e6ac7123d0d5f5ed41
+
+###
+
+POST http://localhost:5000/api/auth/signup
+Content-Type: application/json
+
+{
+  "name": "Abhinay",
+  "email": "test@example.com",
+  "password": "Test12345"
+}
